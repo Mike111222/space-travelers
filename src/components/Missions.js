@@ -5,14 +5,15 @@ import { allMissions, getMissionFromAPI, isLoading } from '../redux/mission/miss
 
 const Missions = () => {
   const missions = useSelector(allMissions);
-  const loading = useDispatch(isLoading);
+  const loading = useSelector(isLoading); // Changed from useDispatch to useSelector
 
   const dispatch = useDispatch();
   useEffect(() => {
-    if (missions.length === 0) {
+    if (missions.length === 0 && !loading) { // Added check for loading state
       dispatch(getMissionFromAPI());
     }
   }, [dispatch, loading, missions.length]);
+
   return (
     <section className="missionContainer">
       <table className="missions">
