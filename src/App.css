@@ -193,10 +193,6 @@ tr:nth-child(even) {
   margin: 0 auto;
 }
 
-.missions {
-  width: 50%;
-}
-
 .rockets {
   width: 50%;
 }
@@ -206,12 +202,6 @@ tr:nth-child(even) {
   font-size: 1.9rem;
   font-weight: 500;
   padding-left: 5px;
-}
-
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(175, 175, 175);
-  border-radius: 5px;
 }
 
 .rocketdata {
@@ -303,4 +293,3 @@ table {
   top: 20px;
   margin: 0;
 }
-
