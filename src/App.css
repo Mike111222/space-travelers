@@ -182,3 +182,125 @@ tr:nth-child(even) {
   font-weight: 500;
   border: 1px solid #8d8a8a;
 }
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 70px;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.missions {
+  width: 50%;
+}
+
+.rockets {
+  width: 50%;
+}
+
+.rocketsHeader {
+  text-align: left;
+  font-size: 1.9rem;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 5px;
+}
+
+.rocketdata {
+  padding: 10px 0 15px 10px;
+  border: 2px solid rgb(175, 175, 175);
+}
+
+.Missionsdata {
+  padding: 10px 20px 15px 10px;
+  border: 2px solid rgb(175, 175, 175);
+}
+
+.missions h2 {
+  text-align: left;
+  font-size: 1.9rem;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.rocketSection {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.rocketInfo {
+  display: flex;
+  width: 100%;
+  row-gap: 20px;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rocketImage {
+  width: 30%;
+}
+
+.rocketSecInfo {
+  width: 70%;
+}
+
+.rocketTitle {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.bookRocket {
+  padding: 13px 20px;
+  background-color: #0290ff;
+  color: white;
+  font-weight: 600;
+  border: 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1.5px 1.5px 6px #021c30;
+  margin: 0;
+  cursor: pointer;
+}
+
+.cancelRocket {
+  padding: 13px 20px;
+  background-color: rgba(175, 175, 175, 0.774);
+  color: rgba(0, 0, 0, 0.658);
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 1.5px 1.5px 6px rgb(75, 75, 75);
+  margin: 0;
+  cursor: pointer;
+}
+
+.rocketParagraphbooked {
+  text-indent: 85px;
+  margin-top: 0;
+}
+
+.bookMarked {
+  background-color: #0290ff;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 0 10px;
+  padding-bottom: 2px;
+  position: relative;
+  top: 20px;
+  margin: 0;
+}
+
