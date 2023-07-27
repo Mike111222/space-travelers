@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { allMissions } from '../redux/mission/missionSlice';
-// import { reserve } from '../redux/rocket/rocketSlice';
+import PRocketView from './rocketProfileView';
 
 const MyProfile = () => {
   const missions = useSelector(allMissions);
   const missionsArray = missions.filter((mission) => mission.joined);
-  // const rocketData = reserve.filter((data) => data.joined);
+  const rocketData = useSelector((state) => state.rockets.Data);
+  const bookedRockets = rocketData.filter((rockets) => rockets.reserved === true);
   return (
     <>
       <div className="mainContainer">
@@ -29,6 +30,9 @@ const MyProfile = () => {
             <span className="item">No Missions Joined</span>
           )}
         </section>
+        <div className="rockets">
+          <PRocketView reservedData={bookedRockets} />
+        </div>
       </div>
     </>
   );
