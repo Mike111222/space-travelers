@@ -22,7 +22,7 @@
     - [Usage](#usage)
     - [Run tests](#run-tests)
     - [Deployment ](#deployment-)
-  - [👥 Author ](#-author-)
+  - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -36,24 +36,23 @@
 
 
 
-**[space-travelers]** is a project in which a collection of Rockets and Missions is displayed. Users can select/book rockets and missions from this space-travelers.
+**[space-travelers]** is a project related to space mission. Users can reserve a rocket, and can join a mission. User can also be able to see data of reserved rockets, and joined missions in My profile tab. It is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions using SpaceX API.
 
 ## 🛠 Built With <a name="built-with"></a>
 JavaScript
 React
 Redux
-Redux Toolkit
-axios
+Jest
 HTML
 CSS
-ThunkAPI
+APIs
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML, CSS, JavaScript, React, Redux, ThunkAPI, Redux Toolkit, axios</a></li>
+    <li><a href="#">HTML, CSS, JavaScript, React, Redux, Jest, APIs</a></li>
   </ul>
 </details>
 
@@ -71,9 +70,9 @@ ThunkAPI
   </ul>
 </details>
 <details>
-  <summary>space-travelersAPI</summary>
+  <summary>API</summary>
   <ul>
-    <!-- <li><a href="https://us-central1-space-travelers-api-e63c8.cloudfunctions.net/space-travelersApi/apps/UUD89QFWkJvMJew3gPgt">space-travelersAPI</a></li> -->
+    <li><a href="#">External API</a></li>
   </ul>
 </details>
 
@@ -81,8 +80,9 @@ ThunkAPI
 
 ### Key Features <a name="key-features"></a>
 
-- **[Allows to Book a Rocket]**
-- **[Allows to Book a Mission]**
+- **[Allow to reserve a Rocket]**
+- **[Allow to cancel reservations]**
+- **[Allow to join a Mission]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,7 +90,8 @@ ThunkAPI
 
 <!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]() -->
+- [React Redux Group Project] -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,6 +137,7 @@ npm install
 To run the project, follow these instructions:
 
 - After Cloning this repo to your local machine.
+- Open the `index.html` in your browser.
 - You can also use `npm start` command in terminal to run this at localhost:3000
 
 ### Run tests
@@ -156,7 +158,7 @@ npx eslint .
 ```
 - run test:
 ```
-npm run test 
+npm test 
 ```
 
 ### Deployment <a name="deployment"></a>
@@ -169,7 +171,7 @@ You can deploy this project using: GitHub Pages,
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Muhammad Amran Khan (Mike)**
 
@@ -177,13 +179,19 @@ You can deploy this project using: GitHub Pages,
 - Twitter: [@iMike111222](https://twitter.com/iMike111222)
 - LinkedIn: [@Mike111222](https://linkedin.com/in/Mike111222)
 
+👤 **Supreeti Kushwaha**
+
+- GitHub: [@supreeti](https://github.com/supreeti)
+- Twitter: [@Ksupreeti](https://twitter.com/Ksupreeti)
+- LinkedIn: [@supreeti-kushwaha-23336232](https://linkedin.com/in/supreeti-kushwaha-23336232)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[I will add all the features in future]**
+- [ ] **[we will add styles to make this project impressive]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,7 +217,7 @@ If you like this project give me a star ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to Zeplin project for the design, Thanks to Microverse, Code Reviewers and my fellow students.
+Use Microverse provided design so far. Thanks to Microverse, my fellow authors and code reviewers.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,7 +227,7 @@ Thanks to Zeplin project for the design, Thanks to Microverse, Code Reviewers an
 
 - **[How this project works]**
 
-  - [You can add/remove books from this space-travelers.]
+  - [User can reserve a rocket, dragon and join mission]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
