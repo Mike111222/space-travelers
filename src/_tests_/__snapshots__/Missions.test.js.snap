@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions should match the snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="missionContainer"
+  >
+    <table
+      class="missions"
+    >
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+          <th>
+             
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Mission 1
+          </td>
+          <td>
+            Mission 1 description
+          </td>
+          <td>
+            <div
+              class="member-badge"
+            >
+              NOT A MEMBER
+            </div>
+          </td>
+          <td>
+            <button
+              class="joinBtn"
+              type="button"
+            >
+              Join Mission
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Mission 2
+          </td>
+          <td>
+            Mission 2 description
+          </td>
+          <td>
+            <div
+              class="member-badge active-mission"
+            >
+              Active Member
+            </div>
+          </td>
+          <td>
+            <button
+              class="leaveBtn"
+              type="button"
+            >
+              Leave Mission
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</DocumentFragment>
+`;
