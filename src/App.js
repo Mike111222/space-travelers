@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 import { useDispatch } from 'react-redux';
 import { fetchData } from './redux/rocket/rocketSlice';
 import './App.css';
@@ -22,6 +21,7 @@ function App() {
           <Route index element={<RocketsView />} />
           <Route path="/rockets" element={<RocketsView />} />
           <Route exact path="/profile" element={<MyProfile />} />
+          <Route exact path="/" element={<MyProfile />} />
           <Route path="/missions" element={<Missions />} />
         </Routes>
       </div>
