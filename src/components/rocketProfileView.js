@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const PRocketView = ({ reservedData }) => (
   <>
-    <h2 className="rocketsHeader">Rockets</h2>
+    <span className="sectionTitle">My Rockets</span>
     {reservedData.length === 0 && (
-      <p>No rockets have been reserved yet!</p>
+      <p>No rockets reserved yet!</p>
     )}
 
     {reservedData.length > 0 && (

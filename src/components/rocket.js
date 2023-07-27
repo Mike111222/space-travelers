@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Rocket = ({ data, handleReservations, handlecancelation }) => (
+const Rocket = ({ data, Reservation, Cancelation }) => (
   <div key={data.id} className="rocketInfo">
     <img src={data.image} alt={`rocket ${data.id}s display`} className="rocketImage" />
     <section className="rocketSecInfo">
@@ -17,13 +17,13 @@ const Rocket = ({ data, handleReservations, handlecancelation }) => (
       )}
 
       {!data.reserved && (
-      <button type="submit" className="bookRocket" onClick={() => handleReservations(data.id)}>
+      <button type="submit" className="bookRocket" onClick={() => Reservation(data.id)}>
         Reserve Rocket
       </button>
       )}
 
       {data.reserved && (
-      <button type="submit" className="cancelRocket" onClick={() => handlecancelation(data.id)}>
+      <button type="submit" className="cancelRocket" onClick={() => Cancelation(data.id)}>
         Cancel Reservation
       </button>
       )}
@@ -42,8 +42,8 @@ Rocket.propTypes = {
       reserved: PropTypes.bool.isRequired,
     }),
   ).isRequired,
-  handleReservations: PropTypes.func.isRequired,
-  handlecancelation: PropTypes.func.isRequired,
+  Reservation: PropTypes.func.isRequired,
+  Cancelation: PropTypes.func.isRequired,
 };
 
 export default Rocket;

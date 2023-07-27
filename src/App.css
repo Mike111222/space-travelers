@@ -68,11 +68,18 @@
 
 .mainContainer {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
   align-content: center;
   justify-content: center;
   align-items: center;
   padding: 4rem;
+}
+
+.rockets {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .logo {
@@ -191,9 +198,10 @@ tr:nth-child(even) {
 
 .rocketInfo {
   display: flex;
-  width: 100%;
+  width: 98%;
   row-gap: 20px;
   column-gap: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -207,7 +215,7 @@ tr:nth-child(even) {
 
 .rocketTitle {
   margin-top: 5px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -220,7 +228,7 @@ tr:nth-child(even) {
   text-align: center;
   border-radius: 5px;
   box-shadow: 1.5px 1.5px 6px #021c30;
-  margin: 0;
+  margin-top: 30px;
   cursor: pointer;
 }
 
@@ -238,8 +246,8 @@ tr:nth-child(even) {
 }
 
 .rocketParagraphbooked {
-  text-indent: 85px;
-  margin-top: 0;
+  text-indent: 90px;
+  margin-top: 10px;
 }
 
 .bookMarked {
