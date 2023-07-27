@@ -1,32 +1,30 @@
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable react/jsx-no-comment-textnodes */
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+
 import { useDispatch } from 'react-redux';
+import { fetchData } from './redux/rocket/rocketSlice';
 import './App.css';
 import Navbar from './components/Navbar';
 import Missions from './components/Missions';
-import Profile from './components/Profile';
-// import RocketList from './components/Rockets';
-// import { getRockets } from './redux/rocket/rocketSlice';
-// import ProfileRocketView from './components/DisplayRocket';
+import MyProfile from './components/MyProfile';
+import RocketsView from './components/rocketView';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    // eslint-disable-next-line no-undef
-    dispatch(getRockets());
+    dispatch(fetchData());
   }, []);
   return (
     <>
-      <Navbar />
-      <Routes>
-        // eslint-disable-next-line react/jsx-no-undef
-        <Route index element={<ProfileRocketView />} />
-        <Route path="/rockets" element={<RocketList />} />
-        <Route path="/missions" element={<Missions />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route index element={<RocketsView />} />
+          <Route path="/rockets" element={<RocketsView />} />
+          <Route exact path="/profile" element={<MyProfile />} />
+          <Route path="/missions" element={<Missions />} />
+        </Routes>
+      </div>
     </>
   );
 }

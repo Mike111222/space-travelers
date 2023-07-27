@@ -1,50 +1,73 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  rockets: [],
-  isLoading: true,
-  isError: false,
+  Data: [],
+  loading: false,
+  error: '',
 };
-const rocketURL = 'https://api.spacexdata.com/v3/rockets/';
-export const getRockets = createAsyncThunk('rockets/getRockets', async (thunkAPI) => {
-  try {
-    const response = await axios(rocketURL);
-    return response.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue('Something went wrong');
-  }
-});
 
-const rocketSlice = createSlice({
+export const fetchData = createAsyncThunk(
+  'rockets/fetchData',
+  async () => {
+    const request = await axios.get('https://api.spacexdata.com/v3/rockets');
+    return request.data;
+  },
+);
+
+const processData = (arrayofObjects) => {
+  const preciseData = arrayofObjects.map((obj) => ({
+    id: obj.id,
+    name: obj.rocket_name,
+    type: obj.rocket_type,
+    description: obj.description,
+    image: obj.flickr_images[0],
+    wikipedia: obj.wikipedia,
+    reserved: false,
+  }));
+  return preciseData;
+};
+
+const RocketSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    revRocket: (state, action) => {
-      const rocketId = action.payload;
-      const newRocket = state.rockets.map((rocket) => {
-        if (rocket.id !== rocketId) return rocket;
-        return { ...rocket, reserved: true };
+    reserve: (state, action) => {
+      const newArray = state.Data.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserved: true };
+        }
+        return rocket;
       });
-      state.rockets = newRocket;
+      return { ...state, Data: newArray };
+    },
+    cancel: (state, action) => {
+      const newArray = state.Data.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
+      });
+      return { ...state, Data: newArray };
     },
   },
   extraReducers: (builder) => {
-    builder
-      .addCase(getRockets.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getRockets.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.error = false;
-        state.rockets = action.payload;
-      })
-      .addCase(getRockets.rejected, (state) => {
-        state.isLoading = false;
-        state.error = true;
-      });
+    builder.addCase(fetchData.pending, (state) => {
+      state.loading = true;
+    });
+
+    builder.addCase(fetchData.fulfilled, (state, action) => {
+      state.loading = false;
+      const processedData = processData(action.payload);
+      state.Data = processedData;
+    });
+
+    builder.addCase(fetchData.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.error.message;
+    });
   },
 });
 
-export const { revRocket } = rocketSlice.actions;
-export default rocketSlice.reducer;
+export const { reserve, cancel } = RocketSlice.actions;
+export default RocketSlice.reducer;

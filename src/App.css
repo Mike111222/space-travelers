@@ -164,7 +164,7 @@ tr:nth-child(even) {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .sectionTitle {
@@ -181,44 +181,6 @@ tr:nth-child(even) {
   font-size: 1.5rem;
   font-weight: 500;
   border: 1px solid #8d8a8a;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 70px;
-  text-align: left;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.rockets {
-  width: 50%;
-}
-
-.rocketsHeader {
-  text-align: left;
-  font-size: 1.9rem;
-  font-weight: 500;
-  padding-left: 5px;
-}
-
-.rocketdata {
-  padding: 10px 0 15px 10px;
-  border: 2px solid rgb(175, 175, 175);
-}
-
-.Missionsdata {
-  padding: 10px 20px 15px 10px;
-  border: 2px solid rgb(175, 175, 175);
-}
-
-.missions h2 {
-  text-align: left;
-  font-size: 1.9rem;
-  font-weight: 500;
-  padding-left: 5px;
 }
 
 .rocketSection {
