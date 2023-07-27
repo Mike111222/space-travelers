@@ -22,6 +22,7 @@ function App() {
           <Route path="/rockets" element={<RocketsView />} />
           <Route exact path="/profile" element={<MyProfile />} />
           <Route exact path="/" element={<MyProfile />} />
+
           <Route path="/missions" element={<Missions />} />
         </Routes>
       </div>
