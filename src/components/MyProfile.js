@@ -5,7 +5,6 @@ import { allMissions } from '../redux/mission/missionSlice';
 const MyProfile = () => {
   const missions = useSelector(allMissions);
   const missionsArray = missions.filter((mission) => mission.joined);
-
   return (
     <>
       <div className="mainContainer">
@@ -28,7 +27,6 @@ const MyProfile = () => {
             <span className="item">No Missions Joined</span>
           )}
         </section>
-
       </div>
     </>
   );
