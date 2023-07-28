@@ -6,7 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
-import RocketsView from './components/rocketView';
+import { RocketsView } from './components/rocketView';
 
 function App() {
   const dispatch = useDispatch();
@@ -21,8 +21,6 @@ function App() {
           <Route index element={<RocketsView />} />
           <Route path="/rockets" element={<RocketsView />} />
           <Route exact path="/profile" element={<MyProfile />} />
-          <Route exact path="/" element={<MyProfile />} />
-
           <Route path="/missions" element={<Missions />} />
         </Routes>
       </div>

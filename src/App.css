@@ -196,7 +196,7 @@ tr:nth-child(even) {
   margin-top: 20px;
 }
 
-.rocketInfo {
+.rocketDisplay {
   display: flex;
   width: 98%;
   row-gap: 20px;
@@ -209,17 +209,17 @@ tr:nth-child(even) {
   width: 30%;
 }
 
-.rocketSecInfo {
+.rInfo {
   width: 70%;
 }
 
-.rocketTitle {
+.title {
   margin-top: 5px;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.bookRocket {
+.book {
   padding: 13px 20px;
   background-color: #0290ff;
   color: white;
@@ -232,7 +232,7 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
-.cancelRocket {
+.cancel {
   padding: 13px 20px;
   background-color: rgba(175, 175, 175, 0.774);
   color: rgba(0, 0, 0, 0.658);
@@ -245,12 +245,12 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
-.rocketParagraphbooked {
+.rocketpara {
   text-indent: 90px;
   margin-top: 10px;
 }
 
-.bookMarked {
+.reserve {
   background-color: #0290ff;
   color: white;
   font-weight: 600;
