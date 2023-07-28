@@ -3,7 +3,7 @@ import Rocket from '../components/rocket';
 
 describe('tests for rocket components', () => {
   test('check snapshot for rocket', () => {
-    const rocketsData = [
+    const data = [
       {
         id: 1,
         name: 'rocket 1',
@@ -24,9 +24,9 @@ describe('tests for rocket components', () => {
 
     const tree = render(
       <Rocket
-        rocketsData={rocketsData}
-        handleReservations={Reservation}
-        handlecancelation={Cancelation}
+        data={data}
+        Reservation={Reservation}
+        Cancelation={Cancelation}
       />,
     );
     expect(tree).toMatchSnapshot();
