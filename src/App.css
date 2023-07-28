@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1% 5%;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.navTitle {
+  font-weight: bold;
+  color: black;
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+}
+
+.logoTitleContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: row;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1.9px;
+  width: 25rem;
+  list-style: none;
+}
+
+.navLinks li {
+  list-style: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+}
+
+.navLinks li a:focus {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navLinks li a:active {
+  text-decoration: underline;
+}
+
+.mainContainer {
+  display: flex;
+  gap: 4rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.rockets {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.logo {
+  width: 5rem;
+  height: auto;
+}
+
+/* ============== MY MISSIONS PAGE ========= */
+.missionContainer {
+  margin: 1rem 5rem 1rem 5rem;
+}
+
+.missions {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #8d8a8a;
+  text-align: left;
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+td {
+  border: 1px solid #8d8a8a;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 8px;
+}
+
+td:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0 0 0 0 !important;
+}
+
+td:nth-child(3) {
+  width: 10rem;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(231, 229, 229);
+}
+
+.member-badge {
+  padding: 0.2rem;
+  margin-right: 0.4rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0.2rem;
+  letter-spacing: 0.1rem;
+  background-color: #8d8a8a;
+}
+
+.active-mission {
+  background-color: #579bb1;
+}
+
+.joinBtn {
+  padding: 0.6rem;
+  font-size: 1rem;
+  color: #8d8a8a;
+  background-color: #f5f4f4;
+  border: 0.1rem solid #8d8a8a;
+  border-radius: 0.23rem;
+  cursor: pointer;
+}
+
+.leaveBtn {
+  padding: 0.6rem;
+  font-size: 1rem;
+  color: red;
+  background-color: #fff;
+  border: 0.1rem solid red;
+  border-radius: 0.23rem;
+  cursor: pointer;
+}
+
+/* ================== MY PROFILE PAGE =================== */
+.myMissions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.myMissionsList {
+  list-style: none;
+}
+
+.item {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 1px solid #8d8a8a;
+}
+
+.rocketSection {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.rocketDisplay {
+  display: flex;
+  width: 98%;
+  row-gap: 20px;
+  column-gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rocketImage {
+  width: 30%;
+}
+
+.rInfo {
+  width: 70%;
+}
+
+.title {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.book {
+  padding: 13px 20px;
+  background-color: #0290ff;
+  color: white;
+  font-weight: 600;
+  border: 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1.5px 1.5px 6px #021c30;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.cancel {
+  padding: 13px 20px;
+  background-color: rgba(175, 175, 175, 0.774);
+  color: rgba(0, 0, 0, 0.658);
+  font-weight: 600;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 1.5px 1.5px 6px rgb(75, 75, 75);
+  margin: 0;
+  cursor: pointer;
+}
+
+.rocketpara {
+  text-indent: 90px;
+  margin-top: 10px;
+}
+
+.reserve {
+  background-color: #0290ff;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 0 10px;
+  padding-bottom: 2px;
+  position: relative;
+  top: 20px;
+  margin: 0;
+}
+
+.rocketrow {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 1px solid #8d8a8a;
+}
+
+.rocketdata {
+  padding: 10px 0 15px 10px;
+  border: 2px solid rgb(175, 175, 175);
+}
