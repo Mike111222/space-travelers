@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for rocket components in my profile view check snapshot for rockets View in my profile 1`] = `
+<div>
+  <span
+    class="sectionTitle"
+  >
+    My Rockets
+  </span>
+  <table
+    class="holderTable"
+  >
+    <tbody>
+      <tr
+        class="rocketrow"
+      >
+        <td
+          class="rocketdata"
+        >
+          rocket 3
+        </td>
+      </tr>
+      <tr
+        class="rocketrow"
+      >
+        <td
+          class="rocketdata"
+        >
+          rocket 4
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

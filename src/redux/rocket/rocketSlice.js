@@ -7,26 +7,22 @@ const initialState = {
   error: '',
 };
 
+const rocketURL = 'https://api.spacexdata.com/v3/rockets';
 export const fetchData = createAsyncThunk(
   'rockets/fetchData',
   async () => {
-    const request = await axios.get('https://api.spacexdata.com/v3/rockets');
-    return request.data;
+    const request = await axios.get(rocketURL);
+    return request.data.map((obj) => ({
+      id: obj.id,
+      name: obj.rocket_name,
+      type: obj.rocket_type,
+      description: obj.description,
+      image: obj.flickr_images[0],
+      wikipedia: obj.wikipedia,
+      reserved: false,
+    }));
   },
 );
-
-const processData = (arrayofObjects) => {
-  const preciseData = arrayofObjects.map((obj) => ({
-    id: obj.id,
-    name: obj.rocket_name,
-    type: obj.rocket_type,
-    description: obj.description,
-    image: obj.flickr_images[0],
-    wikipedia: obj.wikipedia,
-    reserved: false,
-  }));
-  return preciseData;
-};
 
 const RocketSlice = createSlice({
   name: 'rockets',
@@ -58,8 +54,7 @@ const RocketSlice = createSlice({
 
     builder.addCase(fetchData.fulfilled, (state, action) => {
       state.loading = false;
-      const processedData = processData(action.payload);
-      state.Data = processedData;
+      state.Data = action.payload;
     });
 
     builder.addCase(fetchData.rejected, (state, action) => {

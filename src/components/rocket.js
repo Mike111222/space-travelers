@@ -2,32 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Rocket = ({ data, Reservation, Cancelation }) => (
-  <div key={data.id} className="rocketInfo">
+  <div key={data.id} className="rocketDisplay">
     <img src={data.image} alt={`rocket ${data.id}s display`} className="rocketImage" />
-    <section className="rocketSecInfo">
-      <span className="rocketTitle">{data.name}</span>
-      {data.reserved && (
-      <>
-        <div className="bookMarked">Reserved</div>
-        <p className="rocketParagraphbooked">{data.description}</p>
-      </>
+    <section className="rInfo">
+      <span className="title">{data.name}</span>
+      {data.reserved ? (
+        <>
+          <div className="reserve">Reserved</div>
+          <p className="rocketpara">{data.description}</p>
+          <button type="submit" className="cancel" onClick={() => Cancelation(data.id)}>
+            Cancel Reservation
+          </button>
+        </>
+      ) : (
+        <>
+          <p>{data.description}</p>
+          <button type="submit" className="book" onClick={() => Reservation(data.id)}>
+            Reserve Rocket
+          </button>
+        </>
       )}
-      {!data.reserved && (
-      <p className="rocketParagraph">{data.description}</p>
-      )}
-
-      {!data.reserved && (
-      <button type="submit" className="bookRocket" onClick={() => Reservation(data.id)}>
-        Reserve Rocket
-      </button>
-      )}
-
-      {data.reserved && (
-      <button type="submit" className="cancelRocket" onClick={() => Cancelation(data.id)}>
-        Cancel Reservation
-      </button>
-      )}
-
     </section>
   </div>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { allMissions } from '../redux/mission/missionSlice';
-import PRocketView from './rocketProfileView';
+import { PRocketView } from './rocketView';
 
 const MyProfile = () => {
   const missions = useSelector(allMissions);
