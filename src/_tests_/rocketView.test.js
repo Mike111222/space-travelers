@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import PRocketView from '../components/rocketView';
+import { PRocketView } from '../components/rocketView';
 
 describe('tests for rocket components in my profile view', () => {
   test('check snapshot for rockets View in my profile', () => {

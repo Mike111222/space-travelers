@@ -191,7 +191,7 @@ tr:nth-child(even) {
 }
 
 .rocketSection {
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -262,4 +262,16 @@ tr:nth-child(even) {
   position: relative;
   top: 20px;
   margin: 0;
+}
+
+.rocketrow {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 1px solid #8d8a8a;
+}
+
+.rocketdata {
+  padding: 10px 0 15px 10px;
+  border: 2px solid rgb(175, 175, 175);
 }
