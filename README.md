@@ -52,7 +52,7 @@ APIs
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML, CSS, JavaScript, React, Redux, Jest, APIs</a></li>
+    <li>HTML, CSS, JavaScript, React, Redux, Jest, APIs</li>
   </ul>
 </details>
 
@@ -66,13 +66,13 @@ APIs
 <details>
   <summary>Pakage Manager</summary>
   <ul>
-    <li><a href="#">NPM</a></li>
+    <li><a href="https://www.npmjs.com/">NPM</a></li>
   </ul>
 </details>
 <details>
   <summary>API</summary>
   <ul>
-    <li><a href="#">External API</a></li>
+    <li><a href="https://api.spacexdata.com/v3/missions">External API</a></li>
   </ul>
 </details>
 
@@ -177,7 +177,7 @@ You can deploy this project using: GitHub Pages,
 
 - GitHub: [@Mike111222](https://github.com/Mike111222)
 - Twitter: [@iMike111222](https://twitter.com/iMike111222)
-- LinkedIn: [@Mike111222](https://linkedin.com/in/Mike111222)
+- LinkedIn: [@Mike111222](https://linkedin.com/in/iMikeKhan)
 
 👤 **Supreeti Kushwaha**
 
