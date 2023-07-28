@@ -31,7 +31,7 @@ PRocketView.propTypes = {
       image: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       reserved: PropTypes.bool.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

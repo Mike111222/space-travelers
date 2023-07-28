@@ -21,7 +21,8 @@ export const fetchData = createAsyncThunk(
       wikipedia: obj.wikipedia,
       reserved: false,
     }));
-  });
+  },
+);
 
 const RocketSlice = createSlice({
   name: 'rockets',

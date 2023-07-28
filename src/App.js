@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { fetchData } from './redux/rocket/rocketSlice';
@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <div>
