@@ -91,7 +91,7 @@ APIs
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [React Redux Group Project-Space Travelers-](https://sparkling-blancmange-0796ec.netlify.app)
+- [React Redux Group Project-Space Travelers-](https://space-travelers-111222.netlify.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
